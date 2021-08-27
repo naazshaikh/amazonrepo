@@ -16,4 +16,9 @@ class ReadProperties:
         useremail = config.get('login page', 'email')
         return useremail
 
+    @staticmethod
+    def getPassword():
+        password = config.get('login page', 'password')
+        return password
+
 

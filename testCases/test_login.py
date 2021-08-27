@@ -10,7 +10,7 @@ from pageObjects.LoginPage import LoginPage
 class Test_001_Login:
     URL = ReadProperties.getApplicationURL()
     userEmail = ReadProperties.getUserEmail()
-    password = "Nortel123$"
+    password = ReadProperties.getPassword()
 
     logger = LogGen.loggen()
 
@@ -39,8 +39,14 @@ class Test_001_Login:
         self.driver.get(self.URL)
         self.lp = LoginPage(self.driver)
         self.lp.setEmail(self.userEmail)
+        self.logger.info("####### Email entered #########")
         self.lp.clickContinue()
-        self.logger.info("####### Username added #########")
+        self.logger.info("####### Clicked on Continue #########")
+        self.lp.setPassword(self.password)
+        self.logger.info("####### Password entered #########")
+        self.lp.clickLogin()
+        self.logger.info("####### Clicked on Login  #########")
+        self.driver.close()
 
 
 

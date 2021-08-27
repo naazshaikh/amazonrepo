@@ -4,7 +4,7 @@ from selenium import webdriver
 class LoginPage:
     textbox_email_id = "ap_email"
     button_cont_id = "continue"
-    textbox_pwd_id = "password"
+    textbox_pwd_id = "ap_password"
     button_submit_id = "signInSubmit"
 
     def __init__(self, driver):
