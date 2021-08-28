@@ -46,6 +46,8 @@ class Test_001_Login:
         self.logger.info("####### Password entered #########")
         self.lp.clickLogin()
         self.logger.info("####### Clicked on Login  #########")
+        self.lp.clickLogout()
+        self.logger.info("####### Clicked on Logout  #########")
         self.driver.close()
 
 
